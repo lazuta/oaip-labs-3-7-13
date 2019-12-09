@@ -1,0 +1,39 @@
+package Igor.lab11;
+
+import Igor.lab11.Interface.Interface;
+
+public class Metrology implements Interface {
+    protected String name;
+    protected int value;
+    protected double step;
+    protected boolean use = false;
+
+    protected Metrology(){}
+
+    protected Metrology(String name, int value, double step, boolean use) {
+        this.name = name;
+        this.value = value;
+        this.step = step;
+        this.use = use;
+    }
+
+    public String message() {
+        if(use) {
+            return "Измерение произведено с помощью " + name;
+        } else {
+            return "Невозможно произвести измеренеи";
+        }
+    }
+
+    public double doStep() {
+        return step;
+    }
+
+    public double maxValue () {
+        return value;
+    }
+
+    protected double maxValue (double newValue) {
+        return newValue;
+    }
+}
