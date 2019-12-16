@@ -2,7 +2,7 @@ package Valya.lab11.Parts;
 
 import java.util.Date;
 
-interface Space {
+public interface Space {
     int speed = 0;
     double power = 0;
     Date date = new Date();
